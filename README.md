@@ -24,3 +24,11 @@
 Точнее файл содержит ссылку на служебный файл в котором содержится хэш последнего коммита.
 Слово HEAD в коммандах заменяет хэш последнего коммита.
 
+Жизненный цикл файлов и статусы:
+untracked + git add = tracked + staged
+staged + git commit = tracked
+staged (v1) + changed (v2) = tracked + staged (v1) + modified (v2)
+tracked + change = modified
+staged + modified = tracked + staged
+modified + git add = staged
+staged + push = staged + fetch + merge = tracked
